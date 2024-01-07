@@ -8,7 +8,7 @@
     </div>
     <div id="parties"></div>
     <div>
-        <v-btn id="add-party">Add Zone Party</v-btn>
+        <v-btn id="add-party" @click="addParty">Add Zone Party</v-btn>
     </div>
 </div>
 </template>
@@ -16,6 +16,11 @@
 <script>
     export default {
         name: "ZoneParty",
+        methods: {
+            addParty() {
+                this.$brain.addParty();
+            }
+        }
     }
 </script>
 

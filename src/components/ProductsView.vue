@@ -39,7 +39,7 @@
             </tbody>
         </table>
         <div>
-            <v-btn id="add-item">Add Item</v-btn>
+            <v-btn id="add-item" @click="addItem">Add Item</v-btn>
         </div>
     </div>
 </template>
@@ -47,6 +47,11 @@
 <script>
     export default {
         name: "ProductsView",
+        methods: {
+            addItem() {
+                this.$brain.addItem();
+            }
+        }
     }
 </script>
 
