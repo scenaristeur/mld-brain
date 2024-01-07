@@ -9,6 +9,6 @@ import BrainPlugin from "@/plugins/brain-plugin";
 const app = createApp(App)
 
 app.use(router)
-app.use(BrainPlugin, {store})
+app.use(BrainPlugin, {store, router})
 
 app.mount('#app')

@@ -12,7 +12,7 @@ export default {
       // };
 
 
-      app.config.globalProperties.$brain= new Brain({store:store});
+      app.config.globalProperties.$brain= new Brain(options);
 
 
     //   app.config.globalProperties.$getDistanceFromLatLonInKm = (

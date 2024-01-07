@@ -3,6 +3,7 @@
 export class Brain {
   constructor(options = {}) {
     this.options = options
+    this.router = options.router
 
     // this.id = uuidv4()
     // this.messages = []
@@ -11,6 +12,7 @@ export class Brain {
 
   goto(goto_id) {
     console.log('goto', goto_id, this.options)
+    this.router.push({ path: '/brain', hash: "#" + goto_id })
   }
 //   onNewUserMessage(userMessage) {
 //     let message_id = uuidv4()
