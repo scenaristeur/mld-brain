@@ -1,6 +1,6 @@
 <template>
     <div>
-    <div id="party-template">
+    <div id="party-template" hidden>
         <label>Name:
             <v-text-field class="party-name" />
         </label>
@@ -8,7 +8,7 @@
     </div>
     <div id="parties"></div>
     <div>
-        <v-btn id="add-party">Add ZoneParty</v-btn>
+        <v-btn id="add-party">Add Zone Party</v-btn>
     </div>
 </div>
 </template>

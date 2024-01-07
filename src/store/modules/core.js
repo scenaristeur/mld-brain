@@ -8,7 +8,7 @@ const state = () => ({
   });
   
   const mutations = {
-    setcurrent(state, c) {
+    setCurrent(state, c) {
       state.current = c;
       c != null ? this.commit("core/pushToHistory", c) : "";
       console.log("current", state.current, state.history);

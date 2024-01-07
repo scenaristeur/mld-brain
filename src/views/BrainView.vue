@@ -4,7 +4,9 @@
 
  Brain View
 
- {{ $route.hash }}
+ {{ brainId }}
+
+ --
 
 
  <ZoneParty />  
@@ -28,6 +30,19 @@ components: {
   ZoneParty,
   ProductsView
   // BrainConnect  
+},
+data() {
+  return {
+   // brainId: ""
+  }
+},
+computed: {
+  brainId() {
+    let brainId = this.$route.hash.substring(1)
+    this.$brain.setCurrent(brainId)
+    return brainId;
+  }
+
 }
 }
 </script>

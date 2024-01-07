@@ -12,7 +12,10 @@ export class Brain {
   goto(goto_id) {
     console.log('goto', goto_id, this.options)
     this.options.router.push({ path: '/brain', hash: "#" + goto_id })
-    this.options.store.commit("core/setcurrent", goto_id)
+
+  }
+  setCurrent(goto_id) {
+    this.options.store.commit("core/setCurrent", goto_id)
   }
 //   onNewUserMessage(userMessage) {
 //     let message_id = uuidv4()
