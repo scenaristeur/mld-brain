@@ -15,7 +15,7 @@ import BrainConnect from '@/components/BrainConnect.vue'
 export default {
 name: "HomeView",
 components: {
-  BrainConnect  
+   BrainConnect  
 }
 }
 </script>

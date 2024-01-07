@@ -1,8 +1,36 @@
 <template>
     <div>
-        <input v-model="goto_input" placeholder="Go to..." v-on:keyup.enter="onEnter" />
-        <button @click="goto" :disabled="submit_disabled">Go</button>
-        <p v-if="submit_disabled">ℹ️ <i>Brainscope names can only contain lowercase letters and digits</i></p>
+        <v-form @submit.prevent>
+            <v-container>
+                Connect or Create
+              <v-row>
+                <v-col
+                  cols="12"
+                  md="9"
+                >
+                  <v-text-field
+                  v-model="goto_input"
+                  autofocus
+                    label="Go to..."
+                    required
+                    hide-details
+                    v-on:keyup.enter="onEnter" 
+                   
+                  ></v-text-field>
+                </v-col>
+        
+                <v-col
+                  cols="12"
+                  md="2"
+                >
+                <v-btn @click="goto" :disabled="submit_disabled">Go</v-btn>
+                </v-col>
+              </v-row>
+            </v-container>
+            <p v-if="submit_disabled && goto_input !== ''">ℹ️ <i>Brainscope names can only contain lowercase letters and digits</i></p>
+        </v-form>
+
+
     </div>
 </template>
 
@@ -21,6 +49,7 @@
                 this.goto_input = ""
             },
             onEnter() {
+
                 if(!this.submit_disabled){
                     this.goto()
                 } else{
